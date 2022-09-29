@@ -32,11 +32,10 @@ export default class Resources extends EventEmitter {
     for (const asset of this.assets) {
       if (asset.type === "glbModel") {
         this.loaders.gltfLoader.load(asset.path, (file) => {
-
           this.singleAssetLoaded(asset, file);
 
           const textureLoader = new THREE.TextureLoader();
-          const bakedTexture = textureLoader.load("/models/bake1.jpg");
+          const bakedTexture = textureLoader.load("/models/bake6.jpg");
           bakedTexture.flipY = false;
           bakedTexture.encoding = THREE.sRGBEncoding;
 
@@ -47,7 +46,6 @@ export default class Resources extends EventEmitter {
           file.scene.children[0].traverse((child) => {
             child.material = bakedMaterial;
           });
-          
         });
       }
     }

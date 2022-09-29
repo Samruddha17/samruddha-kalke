@@ -55,7 +55,7 @@ export default class Room {
       (child) => child.name === "Display"
     );
     this.desktopBorder.material = new THREE.MeshBasicMaterial({
-      color: 0xc5a651,
+      color: 0x9f8338,
     });
   }
 
@@ -68,7 +68,6 @@ export default class Room {
       }
     });
   }
-
 
   raycastObjectHover() {
     document
@@ -100,7 +99,7 @@ export default class Room {
         } else {
           document.body.style.cursor = "context-menu";
           this.desktopBorder.material = new THREE.MeshBasicMaterial({
-            color: 0xc5a651,
+            color: 0x9f8338,
           });
         }
       });

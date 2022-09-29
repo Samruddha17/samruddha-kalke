@@ -320,7 +320,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: row;
   flex-direction: column;
-  background: rgb(30, 30, 30);
+  background: linear-gradient(283deg, rgba(30, 30, 30), rgba(30, 30, 30));
   backdrop-filter: blur(1.4000000000000057px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgb(18, 18, 18);
@@ -344,11 +344,17 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   z-index: -1;
+  display: none;
 }
 
-.project-container:hover:after {
-  opacity: 0.8;
+.project-container:hover {
+  /* opacity: 0.8; */
+  background: linear-gradient(283deg, #ff00c8e2, #03fafed7);
 }
+
+/* .project-container:hover:after {
+  opacity: 0.8;
+} */
 
 .proj-img {
   margin: 20px;
