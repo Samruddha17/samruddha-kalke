@@ -35,7 +35,7 @@ export default class Resources extends EventEmitter {
           this.singleAssetLoaded(asset, file);
 
           const textureLoader = new THREE.TextureLoader();
-          const bakedTexture = textureLoader.load("/models/bake12.jpg");
+          const bakedTexture = textureLoader.load("/models/bake14.jpg");
           bakedTexture.flipY = false;
           bakedTexture.encoding = THREE.sRGBEncoding;
 
