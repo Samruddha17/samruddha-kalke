@@ -49,14 +49,6 @@ export default class Room {
     this.actualRoom.position.set(0, 0, -1);
     this.actualRoom.rotation.y = -Math.PI / 2;
     // console.log(this.actualRoom.children[0]);
-
-    //seeting desktop border
-    this.desktopBorder = this.actualRoom.children[0].children.find(
-      (child) => child.name === "Display"
-    );
-    this.desktopBorder.material = new THREE.MeshBasicMaterial({
-      color: 0x9f8338,
-    });
   }
 
   onMouseMove() {
@@ -99,7 +91,7 @@ export default class Room {
         } else {
           document.body.style.cursor = "context-menu";
           this.desktopBorder.material = new THREE.MeshBasicMaterial({
-            color: 0x9f8338,
+            color: 0xa3915e,
           });
         }
       });
@@ -123,6 +115,10 @@ export default class Room {
           true
         );
         if (intersects[0].object.name == "Display001") {
+          intersects[0].object.material = new THREE.MeshBasicMaterial({
+            color: 0x000000,
+          });
+
           this.lerp.target = -1.57;
           this.clickFlag = true;
 

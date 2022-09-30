@@ -16,6 +16,7 @@ export default class Renderer {
     this.renderer = new THREE.WebGL1Renderer({
       canvas: this.canvas,
       antialias: true,
+      alpha: true,
     });
     this.renderer.physicallyCorrectLights = true;
     this.renderer.outputEncoding = THREE.sRGBEncoding;
