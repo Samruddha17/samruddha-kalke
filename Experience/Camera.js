@@ -28,8 +28,11 @@ export default class Camera {
     this.perspectiveCamera.rotation.set(-0.3, -0.03, 0.0);
 
     if (window.innerWidth < 900) {
-      this.perspectiveCamera.position.set(-0.05, 1.75, 1.5);
-      this.perspectiveCamera.rotation.set(-0.3, -0.03, 0.0);
+      // this.perspectiveCamera.position.set(-0.05, 1.75, 1.5);
+      // this.perspectiveCamera.rotation.set(-0.3, -0.03, 0.0);
+      
+      this.perspectiveCamera.position.set(-0.05, 1.6, 0.67);
+      this.perspectiveCamera.rotation.set(-0.25, -0.03, 0.0);
     }
 
     this.scene.add(this.perspectiveCamera);
